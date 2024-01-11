@@ -25,7 +25,7 @@ Download the Linux core from releases and skip to step 2 or...
   cp pcsx2_launcher_libretro.info /usr/share/libretro/info/pcsx2_launcher_libretro.info
   ```
 
-3. Make sure [PCSX2](https://pcsx2.net/) [is installed](https://pcsx2.net/download.html) as well as [antimicrox](https://github.com/AntiMicroX/antimicrox/) via your distro's repo or flatpak. You should be able to run both of the following commands:
+3. Make sure [PCSX2](https://pcsx2.net/) [is installed](https://pcsx2.net/download.html) as well as [antimicrox](https://github.com/AntiMicroX/antimicrox/) via your distro's repo. If not, you have the option to use the flatpak or appimage versions. You should be able to run both of the following commands:
 
   ``` bash
   PCSX2
@@ -37,6 +37,7 @@ Download the Linux core from releases and skip to step 2 or...
   flatpak run net.pcsx2.PCSX2
   flatpak run io.github.antimicrox.antimicrox
   ```
+  You can also use the appimage versions of the respective programs. Just copy both to your ~/.config/retroarch/system folder and make sure     they're named pcsx2.AppImage and antimicrox.AppImage.
 
 ## Usage
 
