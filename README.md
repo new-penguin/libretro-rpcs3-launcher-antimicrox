@@ -1,10 +1,12 @@
 # libretro-pcsx2-launcher
 
+![screenshot](https://github.com/new-penguin/libretro-pcsx2-launcher-antimicrox/assets/139792946/fd3f0ca5-1f62-46cd-a367-9920282bb2d4)
+
+
 Based on [libretro-dolphin-launcher](https://github.com/RobLoach/libretro-dolphin-launcher).
 
 Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly from [RetroArch](http://www.libretro.com/) with full controller support using [antimicrox](https://github.com/AntiMicroX/antimicrox/).
 
-![PCSX2 Launcher Screenshot](screenshot.jpg)
 
 ## Installation
 
