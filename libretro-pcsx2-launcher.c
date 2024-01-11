@@ -164,6 +164,18 @@ bool retro_load_game(const struct retro_game_info *info)
       return true;
    }
 
+   // AppImage
+   printf("libretro-pcsx2-launcher: PCSX2 not found. Attempting AppImage...\n");
+   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/pcsx2.AppImage");
+   if (info != NULL && info->path != NULL && info->path[0] != '\0') {
+      // Execute with --batch.
+      sprintf(command, "%s \"%s\"", command, info->path);
+   }
+   if (system(command) == 0) {
+      printf("libretro-pcsx2-launcher: Finished running PCSX2 through AppImage.\n");
+      return true;
+   }
+
    printf("libretro-pcsx2-launcher: Failed running PCSX2. Install it and try again.\n");
    return false;
 }
