@@ -10,6 +10,8 @@ Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly fr
 
 ## Installation
 
+Download the Linux core from releases and skip to step 2 or...
+
 1. Compile the core
   ``` bash
   git clone https://github.com/new-penguin/libretro-pcsx2-launcher-antimicrox.git
