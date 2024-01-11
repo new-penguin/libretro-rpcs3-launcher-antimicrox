@@ -1,6 +1,6 @@
 # libretro-pcsx2-launcher
 
-![screenshot](https://github.com/new-penguin/libretro-pcsx2-launcher-antimicrox/assets/139792946/fd3f0ca5-1f62-46cd-a367-9920282bb2d4)
+![Screenshot_20240111_094956](https://github.com/new-penguin/libretro-pcsx2-launcher-antimicrox/assets/139792946/af587200-e40f-4576-b948-9da67d9a9ec0)
 
 
 Based on [libretro-dolphin-launcher](https://github.com/RobLoach/libretro-dolphin-launcher).
