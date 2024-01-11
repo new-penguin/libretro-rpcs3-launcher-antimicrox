@@ -22,7 +22,7 @@ Launch Sony PlayStation 2 games through [PCSX2](https://pcsx2.net/), directly fr
   ```
 
 3. Make sure [PCSX2](https://pcsx2.net/) [is installed](https://pcsx2.net/download.html) as well as [antimicrox](https://github.com/AntiMicroX/antimicrox/) via your distro's repo or flatpak. You should be able to run both of the following commands:
-4. 
+
   ``` bash
   PCSX2
   antimicrox
