@@ -44,9 +44,9 @@ Download the Linux core from releases and skip to step 2 or...
 
 2. Associate your games with the Sony - Playstation 2 (PCSX2 Launcher) core
 
-3. Configure antimicrox to use your distro's 'close window' binding to your controller button preference. I've provided a couple controller mapping examples for the 360 and Xbox One controllers which you can place in your user ~/ directory. LS click + RS click exit PCSX2 in those examples
+3. Configure antimicrox to use your distro's 'close window' binding to your controller button preference. Or you can use my pre-configured controller mappings [here](https://ufile.io/9t4vnq6m) for the 360 and Xbox One controllers. Place in your user ~/ directory. In the provided examples I've mapped LS click + RS click to exit PCSX2. PCSX2 should be configured to start in fullscreen via settings --> interface --> start fullscreen.   
   
-3. Launch the games directly from the RetroArch menu
+3. And once done you should be able to launch and switch games directly from the RetroArch menu
 
 3. Alternatively, you can run games through the command line
   ``` bash
