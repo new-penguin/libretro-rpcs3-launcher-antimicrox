@@ -154,7 +154,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // Flatpak
    printf("libretro-yuzu-launcher: Yuzu not found. Attempting Flatpak...\n");
-   strcpy(command, "flatpak run io.github.antimicrox.antimicrox & flatpak run org.yuzu_emu.yuzu");
+   strcpy(command, "flatpak run io.github.antimicrox.antimicrox & flatpak run org.yuzu_emu.yuzu -f -g");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
@@ -166,7 +166,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // AppImage
    printf("libretro-yuzu-launcher: Yuzu not found. Attempting AppImage...\n");
-   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/yuzu.AppImage");
+   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/yuzu.AppImage -f -g");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
