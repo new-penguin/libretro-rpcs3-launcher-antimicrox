@@ -1,4 +1,4 @@
-# libretro-yuzu-launcher
+# libretro-cemu-launcher
 
 
 
