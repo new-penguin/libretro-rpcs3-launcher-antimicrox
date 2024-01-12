@@ -50,7 +50,7 @@ Download the Linux core from releases and skip to step 2 or...
 
 3. Alternatively, you can run games through the command line
   ``` bash
-  retroarch -L cemu_launcher_libretro.so Crash.iso
+  retroarch -L cemu_launcher_libretro.so "game.rpx"
   ```
 
 ## Contributors
