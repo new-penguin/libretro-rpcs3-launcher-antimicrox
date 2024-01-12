@@ -2,7 +2,7 @@
 
 
 
-Based on [libretro-dolphin-launcher](https://github.com/RobLoach/libretro-dolphin-launcher) and [libretro-PCSX2-laucnher](https://github.com/eduardomozart/libretro-pcsx2-launcher). 
+Based on [libretro-dolphin-launcher](https://github.com/RobLoach/libretro-dolphin-launcher) and [libretro-PCSX2-launcher](https://github.com/eduardomozart/libretro-pcsx2-launcher). 
 
 Launch Nintendo Switch games through [Yuzu](https://yuzu-emu.org/downloads/), directly from [RetroArch](http://www.libretro.com/) with full controller support using [antimicrox](https://github.com/AntiMicroX/antimicrox/).
 
