@@ -40,7 +40,7 @@ Download the Linux core from releases and skip to step 2 or...
 
 ## Usage
 
-1. Scan Nintendo games in RetroArch
+1. Scan Nintendo Switch games in RetroArch
 
 2. Associate your games with the Nintendo Switch (Yuzu Launcher) core
 
