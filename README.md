@@ -1,4 +1,5 @@
 # libretro-rpcs3-launcher
+ ![RPCS3](https://github.com/new-penguin/libretro-rpcs3-launcher-antimicrox/assets/139792946/ef793d4b-084c-47a9-bbdb-7f5b6120b9e9)
 
 
 
