@@ -43,10 +43,10 @@ void retro_set_controller_port_device(unsigned port, unsigned device)
 void retro_get_system_info(struct retro_system_info *info)
 {
    memset(info, 0, sizeof(*info));
-   info->library_name     = "PCSX2 Launcher";
-   info->library_version  = "1.1.2";
+   info->library_name     = "Yuzu Launcher";
+   info->library_version  = "1.0";
    info->need_fullpath    = true;
-   info->valid_extensions = "bin|iso|img|nrg|mdf|z|z2|bz2|dump|chd";
+   info->valid_extensions = "bin|iso|img|xci|nsp|nca|nso|nro|dump|chd";
 }
 
 static retro_video_refresh_t video_cb;
@@ -121,7 +121,7 @@ void retro_reset(void)
 /**
  * libretro callback; Called every game tick.
  *
- * Once the core has run, we will attempt to exit, since pcsx2 is done.
+ * Once the core has run, we will attempt to exit, since yuzu is done.
  */
 void retro_run(void)
 {
@@ -129,7 +129,7 @@ void retro_run(void)
    unsigned stride = 320;
    video_cb(frame_buf, 320, 240, stride << 2);
 
-   // Shutdown the environment now that pcsx2 has loaded and quit.
+   // Shutdown the environment now that yuzu has loaded and quit.
    environ_cb(RETRO_ENVIRONMENT_SHUTDOWN, NULL);
 }
 
@@ -138,45 +138,45 @@ void retro_run(void)
  */
 bool retro_load_game(const struct retro_game_info *info)
 {
-   // Launch without the gui if available (pcsx2).
-   char command[512] = "antimicrox & pcsx2-qt";
+   // Launch without the gui if available (yuzu).
+   char command[512] = "antimicrox & yuzu -f -g";
 
    // Check if there is content to load.
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       sprintf(command, "%s \"%s\"", command, info->path);
    }
 
-   // Check if running pcsx2 works.
+   // Check if running yuzu works.
    if (system(command) == 0) {
-      printf("libretro-pcsx2-launcher: Completed PCSX2\n");
+      printf("libretro-yuzu-launcher: Completed Yuzu\n");
       return true;
    }
 
    // Flatpak
-   printf("libretro-pcsx2-launcher: PCSX2 not found. Attempting Flatpak...\n");
-   strcpy(command, "flatpak run io.github.antimicrox.antimicrox & flatpak run net.pcsx2.PCSX2");
+   printf("libretro-yuzu-launcher: Yuzu not found. Attempting Flatpak...\n");
+   strcpy(command, "flatpak run io.github.antimicrox.antimicrox & flatpak run org.yuzu_emu.yuzu");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
    }
    if (system(command) == 0) {
-      printf("libretro-pcsx2-launcher: Finished running PCSX2 through Flatpak.\n");
+      printf("libretro-yuzu-launcher: Finished running Yuzu through Flatpak.\n");
       return true;
    }
 
    // AppImage
-   printf("libretro-pcsx2-launcher: PCSX2 not found. Attempting AppImage...\n");
-   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/pcsx2.AppImage");
+   printf("libretro-yuzu-launcher: Yuzu not found. Attempting AppImage...\n");
+   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/yuzu.AppImage");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
    }
    if (system(command) == 0) {
-      printf("libretro-pcsx2-launcher: Finished running PCSX2 through AppImage.\n");
+      printf("libretro-yuzu-launcher: Finished running Yuzu through AppImage.\n");
       return true;
    }
 
-   printf("libretro-pcsx2-launcher: Failed running PCSX2. Install it and try again.\n");
+   printf("libretro-yuzu-launcher: Failed running Yuzu. Install it and try again.\n");
    return false;
 }
 
