@@ -20,8 +20,8 @@ Download the Linux core from releases and skip to step 2 or...
 
 2. Copy the core file to the RetroArch cores directory. For example, to copy to the default core directory
   ``` bash
-  cp yuzu_launcher_libretro.so /usr/lib/libretro/pcsx2_launcher_libretro.so
-  cp yuzu_launcher_libretro.info /usr/share/libretro/info/pcsx2_launcher_libretro.info
+  cp yuzu_launcher_libretro.so /usr/lib/libretro/yuzu_launcher_libretro.so
+  cp yuzu_launcher_libretro.info /usr/share/libretro/info/yuzu_launcher_libretro.info
   ```
 
 3. Make sure [Yuzu](https://yuzu-emu.org/downloads) in installed as well as [antimicrox](https://github.com/AntiMicroX/antimicrox/) via your distro's repo. If not, you have the option to use the flatpak or appimage versions. You should be able to run both of the following commands:
