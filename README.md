@@ -14,7 +14,7 @@ Download the Linux core from releases and skip to step 2 or...
 1. Compile the core
   ``` bash
   git clone https://github.com/new-penguin/libretro-cemu-launcher-antimicrox
-  cd libretro-yuzu-launcher-antimicrox
+  cd libretro-cemu-launcher-antimicrox
   make
   ```
 
