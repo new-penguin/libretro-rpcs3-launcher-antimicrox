@@ -139,7 +139,7 @@ void retro_run(void)
 bool retro_load_game(const struct retro_game_info *info)
 {
    // Launch without the gui if available (rpcs3).
-   char command[512] = "antimicrox & rpcs3 --fullscreen --no-gui";
+   char command[512] = "antimicrox --tray & rpcs3 --fullscreen --no-gui";
 
    // Check if there is content to load.
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
@@ -154,7 +154,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // Flatpak
    printf("libretro-rpcs3-launcher: RPCS3 not found. Attempting Flatpak...\n");
-   strcpy(command, "flatpak run io.github.antimicrox.antimicrox & flatpak run net.rpcs3.RPCS3 --fullscreen --no-gui");
+   strcpy(command, "flatpak run io.github.antimicrox.antimicrox --tray & flatpak run net.rpcs3.RPCS3 --fullscreen --no-gui");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
@@ -166,7 +166,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // AppImage
    printf("libretro-rpcs3-launcher: RPCS3 not found. Attempting AppImage...\n");
-   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage & ~/.config/retroarch/system/rpcs3.AppImage --fullscreen --no-gui");
+   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage --tray & ~/.config/retroarch/system/rpcs3.AppImage --fullscreen --no-gui");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
